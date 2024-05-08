@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Smart Irrigation System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Smart Irrigation System</h1>
+  </header>
+
+  <main>
+    <div class="data-container">
+      <div class="data-block moisture-block">
+        <p>Moisture Value:</p>
+        <span id="moistureValue">Loading...</span>
+        <br>
+        <br>
+       <a href="graph.html" target="_blank">Show More</a>
+      </div>
+      <div class="data-block watering-block">
+        <p>Watering Status:</p>
+        <span id="wateringStatus">Loading...</span>
+        <br>
+        <br>
+        <a href="page2.html" target="_blank">Show More</a>
+      </div>
+      <div class="data-block tank-level-block">
+        <p>Tank Level:</p>
+        <span id="tankLevel">Loading...</span>
+        <br>
+        <br>
+        <a href="page3.html" target="_blank">Show More</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

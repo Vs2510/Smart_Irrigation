@@ -1,0 +1,193 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 28px;
+}
+
+/* Main content styles */
+main {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+/* Blocks container */
+.data-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Data block styles */
+.data-block {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Moisture value block */
+.moisture-block {
+    background-color: #82ca9d;
+}
+
+/* Watering status block */
+.watering-block {
+    background-color: #64b5f6;
+}
+
+/* Tank level block */
+.tank-level-block {
+    background-color: #ffcc80;
+}
+
+/* Data display styles */
+span {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Footer styles */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 28px;
+}
+
+/* Main content styles */
+main {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+/* Blocks container */
+.data-container {
+    display: flex; /* Use flexbox for horizontal arrangement */
+    flex-wrap: wrap; /* Allow wrapping if content overflows */
+    justify-content: space-between; /* Center the blocks horizontally */
+    gap: 20px;
+}
+
+/* Data block styles */
+.data-block {
+    position: relative;
+    flex: 0 0 calc(33.33% - 20px); /* Adjust width of each block */
+    max-width: calc(33.33% - 20px); /* Maximum width of each block */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 200px;
+}
+/* Style for the Show More link */
+.data-block a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover state */
+.data-block a:hover {
+    background-color:green;
+}
+
+
+/* Moisture value block */
+.moisture-block {
+    background-color: #82ca9d;
+}
+
+/* Watering status block */
+.watering-block {
+    background-color: #64b5f6;
+}
+
+/* Tank level block */
+.tank-level-block {
+    background-color: #ffcc80;
+}
+
+/* Data display styles */
+span {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Footer styles */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    .data-container {
+        flex-direction: column; /* Stack blocks vertically on small screens */
+        align-items: center; /* Center blocks horizontally */
+    }
+
+    .data-block {
+        flex: 0 0 calc(100% - 20px); /* Full width on small screens */
+        max-width: calc(100% - 20px); /* Maximum width on small screens */
+    }
+}

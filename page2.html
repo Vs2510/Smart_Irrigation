@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Moisture Threshold and Watering Status</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        canvas {
+            width: 100%;
+            height: 400px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            canvas {
+                height: 300px;
+            }
+        }
+
+        @media only screen and (min-width: 601px) {
+            canvas {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Moisture Threshold</h2>
+    <canvas id="moistureThresholdChart"></canvas>
+
+    <h2>Watering Status</h2>
+    <canvas id="wateringStatusChart"></canvas>
+
+    <script>
+        // Data for moisture threshold
+        const moistureThresholdLabels = ['Low', 'Medium', 'High'];
+        const moistureThresholdValues = [30, 50, 70];
+
+        const moistureThresholdCtx = document.getElementById('moistureThresholdChart').getContext('2d');
+        new Chart(moistureThresholdCtx, {
+            type: 'bar',
+            data: {
+                labels: moistureThresholdLabels,
+                datasets: [{
+                    label: 'Moisture Threshold',
+                    data: moistureThresholdValues,
+                    backgroundColor: ['rgba(255, 99, 132, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(75, 192, 192, 0.5)'],
+                    borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(75, 192, 192, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Moisture Level (%)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Threshold'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Data for watering status
+        const wateringStatusLabels = ['Dry', 'Moist', 'Wet'];
+        const wateringStatusValues = [20, 50, 80];
+
+        const wateringStatusCtx = document.getElementById('wateringStatusChart').getContext('2d');
+        new Chart(wateringStatusCtx, {
+            type: 'doughnut',
+            data: {
+                labels: wateringStatusLabels,
+                datasets: [{
+                    label: 'Watering Status',
+                    data: wateringStatusValues,
+                    backgroundColor: ['rgba(255, 99, 132, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(75, 192, 192, 0.5)'],
+                    borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(75, 192, 192, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Watering Status Distribution'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

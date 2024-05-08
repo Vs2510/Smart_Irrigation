@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Irrigation</title>
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+  <div class="container">
+    <form class="login-form" id="loginForm">
+      <h2>Irrigation</h2>
+      <div class="input-group">
+        <input type="text" id="username" placeholder="Username" required autocomplete="off">
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Password" required autocomplete="off">
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      // Define the predefined username and password
+      const predefinedUsername = "Vaibhav";
+      const predefinedPassword = "1234";
+      
+      // Get the entered username and password
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      
+      // Check if the entered username and password match the predefined values
+      if(username === predefinedUsername && password === predefinedPassword) {
+        // If the credentials are correct, show a pop-up message
+        alert("Login successful!");
+        // Redirect to another page
+        window.location.href = "index.html";
+      } else {
+        // If the credentials are incorrect, display an error message
+        alert("Invalid username or password. Please try again.");
+      }
+    });
+  </script>
+</body>
+</html>
